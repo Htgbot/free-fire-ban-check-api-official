@@ -19,3 +19,21 @@ This PHP script checks whether a Free Fire UID is banned using the official Gare
 ```http
 GET /check_ff_status.php?uid=2160560832
 GET https://htgapisitedt.x10.mx/Isban.php?uid=12345678
+
+### ✅ Response (Not Banned):
+{
+  "status": "success",
+  "uid": "2160560832",
+  "is_banned": 0,
+  "ban_period": 0,
+  "message": "Player is not banned."
+}
+
+🚫 Response (Banned):
+{
+  "status": "success",
+  "uid": "2160560832",
+  "is_banned": 1,
+  "ban_period": 6,
+  "message": "Player is banned for 6 month(s)."
+}
